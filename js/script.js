@@ -68,7 +68,7 @@ function removeTaskFromLocalStorage(taskItem) {
   if (localStorage.getItem("tasks") === null) {
     tasks = [];
   } else {
-    tasks.JSON.parse(localStorage.getItem("tasks"));
+    tasks = JSON.parse(localStorage.getItem("tasks"));
   }
   tasks.forEach((task, index) => {
     if (taskItem.textContent === task) {
