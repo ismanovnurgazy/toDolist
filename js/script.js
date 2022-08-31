@@ -62,6 +62,7 @@ function removeTask(e) {
       removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
 }
+//Удаление тасков
 
 function removeTaskFromLocalStorage(taskItem) {
   let tasks;
@@ -77,6 +78,8 @@ function removeTaskFromLocalStorage(taskItem) {
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
+//Добавление тасков
 
 function addTask(e) {
   if (taskInput.value === "") {
